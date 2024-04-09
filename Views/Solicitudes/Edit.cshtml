@@ -1,0 +1,535 @@
+﻿@model Carvajar_2._1.Models.Data.Solicitud
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid px-4">
+    <h1>Editar</h1>
+
+    <h4>Solicitud</h4>
+</div>
+
+<hr />
+<div >
+
+    <div class="container">
+        <div class="row d-flex justify-content-center align-items-center ">
+            <div class="col-lg-8 col-xl-8 mt-5 mb-5">
+                <div class="card rounded-3">
+                    
+                    <div class="card-body">
+
+              
+
+
+                        <form asp-action="Edit" class="px-md-2">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="IdSolicitud" />
+
+                            <div class="row">
+                                <div class="col mb-4">
+
+                                    <label asp-for="Solicitante" class="control-label">Nombre Completo Solicitante</label>
+                                    <input asp-for="Solicitante"  class="form-control" />
+                                    <span asp-validation-for="Solicitante" class="text-danger"></span>
+
+
+                                </div>
+                                <div class="col mb-4">
+                                    <label asp-for="Cliente" class="control-label"></label>
+                                    <input asp-for="Cliente"  class="form-control"  />
+                                    <span asp-validation-for="Cliente" class="text-danger"></span>
+
+
+                                </div>
+                                <br>
+                            </div>
+
+                            <!--Fila 2-->
+
+                            <div class="row">
+                                <div class="col mb-4 ">
+                                    <label asp-for="Correo" class="control-label"></label>
+                                    <input asp-for="Correo"  class="form-control" />
+                                    <span asp-validation-for="Correo" class="text-danger"></span>
+
+                                </div>
+                                <div class="col mb-4"> 
+                                    <label asp-for="Telefono" class="control-label"></label>
+                                    <input asp-for="Telefono"  class="form-control" />
+                                    <span asp-validation-for="Telefono" class="text-danger"></span>
+
+                                </div>
+                                <br>
+                            </div>
+                            <div class="row">
+                                @if (User.IsInRole("Administrador"))
+                                {
+                                    <div class="col mb-4">
+                                        <label asp-for="IdIngeniero" class="control-label">Ingeniero</label>
+                                        <select asp-for="IdIngeniero" class="form-control" asp-items="ViewBag.IdIngeniero">
+                                            <option selected disabled>---Selecciona una opcion---</option>
+                                        </select>
+                                        <span asp-validation-for="IdIngeniero" class="text-danger"></span>
+                                    </div>
+                                }
+
+                            </div>
+
+                            <!--Fila 3-->
+
+                            <div class="row">
+                                <div class="col mb-4">
+                                    <label asp-for="Producto" class="control-label"></label>
+                                    <textarea type="text" rows="3" asp-for="Producto" class="form-control"></textarea>
+                                    <span asp-validation-for="Producto" class="text-danger"></span>
+                                </div>
+                                <br>
+                            </div>
+
+                            <!--Fila 4-->
+
+                            <div class="row">
+                                <div class="col mb-4">
+                                    <label asp-for="IdTipo" class="control-label">Tipo de solicitud</label>
+                                    <select asp-for="IdTipo" class="form-control" asp-items="ViewBag.IdTipo">
+                                        <option selected disabled>---Selecciona una opcion---</option>
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                            <!--Fila 4-->
+
+                            <div class="row">
+
+                                <div class="col mb-4">
+                                    <label class="control-label m">Tipo de envio      </label>
+                                </div>
+
+
+
+                                <div class="col">
+
+                                    <label asp-for="Email" class="control-label"></label>
+                                    
+                                        @Html.CheckBox("Email")
+                                
+
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+
+                                <div class="col">
+                                    <label asp-for="Sms" class="control-label"></label>
+                                    @Html.CheckBox("Sms")
+                                    <span asp-validation-for="Sms" class="text-danger"></span>
+                                </div>
+
+
+                                <div class="col">
+                                    <label asp-for="Fisico" class="control-label"></label>
+                                    @Html.CheckBox("Fisico")
+                                    <span asp-validation-for="Fisico" class="text-danger"></span>
+                                </div>
+
+
+                                <div class="col">
+                                    <label asp-for="Pdf" class="control-label"></label>
+                                    @Html.CheckBox("Pdf")
+                                    <span asp-validation-for="Pdf" class="text-danger"></span>
+                                </div>
+
+
+                                <div class="col">
+                                    <label asp-for="Publicacion" class="control-label"></label>
+                                    @Html.CheckBox("Publicacion")
+                                    <span asp-validation-for="Publicacion" class="text-danger"></span>
+                                </div>
+
+
+
+
+
+                                <br>
+                            </div>
+
+                            <div class="row" id="EmailContent" style="display: none">
+                                <h5>Contenido email</h5>
+                                <div class="form-group mb-4">
+                                    <label asp-for="AsuntoEmail" class="control-label"> Asunto del email</label>
+                                    <input asp-for="AsuntoEmail" class="form-control" />
+                                    <span asp-validation-for="AsuntoEmail" class="text-danger"></span>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label asp-for="DominioCorpEmail" class="control-label">Dominio o remitente corporativo</label>
+                                    <input asp-for="DominioCorpEmail" class="form-control" />
+                                    <span asp-validation-for="DominioCorpEmail" class="text-danger"></span>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label asp-for="CuerpoEmail" class="control-label">Cuerpo del email</label>
+                                    <textarea type="text" rows="3" asp-for="CuerpoEmail" class="form-control"></textarea>
+                                    <span asp-validation-for="CuerpoEmail" class="text-danger"></span>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label asp-for="NombrePdf" class="control-label">Nombre del PDF</label>
+                                    <input asp-for="NombrePdf" class="form-control" />
+                                    <span asp-validation-for="NombrePdf" class="text-danger"></span>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label asp-for="EncriptadoEmail" class="control-label">¿Aplica encriptado?</label>
+                                    
+                                        @Html.CheckBox("EncriptadoEmail" )
+                                   
+                                    <span asp-validation-for="EncriptadoEmail" class="text-danger"></span>
+                                </div>
+                                <div class="form-group mb-4" id="EncriptadoContent" style="display: none">
+                                    <label asp-for="ClaveEmail" class="control-label">Dato para la clave</label>
+                                    <input class="form-control" />
+                                    <span asp-validation-for="ClaveEmail" class="text-danger"></span>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label asp-for="CertificadoEmail" class="control-label">¿Aplica certificado?</label>
+                                    @Html.CheckBox("CertificadoEmail" )
+                                    <span asp-validation-for="CertificadoEmail" class="text-danger"></span>
+                                </div>
+                                <div class="form-group mb-4" id="CertificadoContent" style="display: none">
+                                    <label asp-for="DominioEmail" class="control-label">Dominio para certificar</label>
+                                    <input asp-for="DominioEmail" class="form-control" />
+                                    <span asp-validation-for="DominioEmail" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="row" id="SmsContent" style="display: none">
+                                <h5>Contenido SMS</h5>
+                                <div class="form-group mb-4">
+                                    <label asp-for="Mensaje" class="control-label"></label>
+                                    <textarea type="text" rows="3" asp-for="Mensaje" class="form-control"></textarea>
+                                    <span asp-validation-for="Mensaje" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="row" id="FisicoContent" style="display: none">
+                                <h5>Contenido Fisico</h5>
+
+                                <div class="form-group mb-4">
+                                    <label asp-for="Color" class="control-label">Impresion</label><br>
+
+                                    <input type="radio" asp-for="Color" value="false">
+                                    <label for="css">Blanco y negro</label><br>
+                                    <input type="radio" asp-for="Color" value="true">
+                                    <label for="html">Color</label><br>
+                                    <span asp-validation-for="Color" class="text-danger"></span>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label asp-for="AislamientoFisico" class="control-label">Aislamiento</label>
+                                    <input asp-for="AislamientoFisico" class="form-control" />
+                                    <span asp-validation-for="AislamientoFisico" class="text-danger"></span>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label asp-for="TamanoFisico" class="control-label">Tamaño del papel</label>
+                                    <input asp-for="TamanoFisico" class="form-control" />
+                                    <span asp-validation-for="TamanoFisico" class="text-danger"></span>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label asp-for="TipoPapelFisico" class="control-label">Tipo de papel</label>
+                                    <input asp-for="TipoPapelFisico" class="form-control" />
+                                    <span asp-validation-for="TipoPapelFisico" class="text-danger"></span>
+                                </div>
+                                <div class="form-group mb-4">
+
+                                    <input type="radio" asp-for="TipoFisico" value="false">
+                                    <label asp-for="TipoFisico">Simplex</label><br>
+                                    <input type="radio" asp-for="TipoFisico" value="true">
+                                    <label asp-for="TipoFisico">Duplex</label><br>
+
+                                    <span asp-validation-for="TipoFisico" class="text-danger"></span>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label asp-for="Microperforado" class="control-label">Microperforado</label>
+                                    <input asp-for="Microperforado" class="form-control" />
+                                    <span asp-validation-for="Microperforado" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="row" id="PdfContent" style="display: none">
+                                <h5>Contenido Pdf</h5>
+
+                                <div class="form-group mb-4">
+                                    <label asp-for="TipoEntrega" class="control-label"></label>
+                                    <input asp-for="TipoEntrega" class="form-control" />
+                                    <span asp-validation-for="TipoEntrega" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="row" id="PublicacionContent" style="display: none">
+                                <h5>Contenido Publicacion</h5>
+
+                                <div class="form-group mb-4">
+                                    <label asp-for="ContenidoPublicacion" class="control-label"></label>
+                                    <textarea type="text" rows="3" asp-for="ContenidoPublicacion" class="form-control"></textarea>
+                                    <span asp-validation-for="ContenidoPublicacion" class="text-danger"></span>
+                                </div>
+
+                            </div>
+
+                            <!--Fila 5-->
+
+                            <div class="row">
+                                <div class="col mb-4 ">
+                                    <label asp-for="IdCaracteristica" class="control-label">Caracteristica</label>
+                                    <select asp-for="IdCaracteristica" class="form-control" asp-items="ViewBag.IdCaracteristica">
+                                        <option selected disabled>---Selecciona una opcion---</option>
+                                    </select>
+
+                                </div>
+                                <div class="col mb-4">
+                                    <label asp-for="IdPeriodicidad" class="control-label">Periodicidad</label>
+                                    <select asp-for="IdPeriodicidad" class="form-control" asp-items="ViewBag.IdPeriodicidad">
+                                        <option selected disabled>---Selecciona una opcion---</option>
+                                    </select>
+
+                                </div>
+                                <br>
+                            </div>
+
+                            <div class="row">
+                                <div class="col mb-4">
+                                    <label asp-for="FechaSolicitud" class="control-label">Fecha de solicitud</label>
+                                    <input asp-for="FechaSolicitud" class="form-control" />
+                                    <span asp-validation-for="FechaSolicitud" class="text-danger"></span>
+
+                                </div>
+                                <br>
+                            </div>
+
+                            <div class="row">
+                                <div class="col mb-4">
+                                    <label class="form-label" asp-for="Descripcion">Descripcion</label>
+                                    <textarea type="text" rows="3" asp-for="Descripcion" class="form-control"></textarea>
+                                </div>
+
+                                <br>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group  mb-4">
+                                    <label asp-for="ReqFunc" class="control-label">Requerimientos Funcionales</label>
+                                    <textarea type="text" rows="3" asp-for="ReqFunc" class="form-control"></textarea>
+                                    <span asp-validation-for="ReqFunc" class="text-danger"></span>
+
+                                    
+
+
+                                </div>
+
+
+
+                                <div class="form-group  mb-4">
+                                    <label asp-for="ReqNoFunc" class="control-label"> Requerimientos No Funcionales</label>
+                                    <textarea type="text" rows="3" asp-for="ReqNoFunc" class="form-control"></textarea>
+                                    <span asp-validation-for="ReqNoFunc" class="text-danger"></span>
+
+                                    
+                                </div>
+
+
+
+                                <div class="form-group  mb-4">
+                                    <label asp-for="ReqAmbiente" class="control-label">Requerimientos de Ambiente Técnico</label>
+                                    <textarea type="text" rows="3" asp-for="ReqAmbiente" class="form-control"></textarea>
+                                    <span asp-validation-for="ReqAmbiente" class="text-danger"></span>
+
+
+                                   
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="mb-5  text-center">
+                                    <input type="submit" value="Guardar" class="btn btn-primary btn-lg">
+                                    <a asp-action="Index" value="Regresar" class="btn btn-secondary btn-lg">Cancelar</a>
+                                    
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+<script src="~/js/jquery-latest.min.js"></script>
+<script>
+    $(function () {
+        var x = $('#Email').is(':checked');
+        if (x == true) {
+            $('#EmailContent').show();
+
+        }
+        else {
+            $('#EmailContent').hide();
+
+        }
+        $('#Email').click(function (event) {
+            var x = $(this).is(':checked');
+            if (x == true) {
+                $('#EmailContent').show();
+
+            }
+            else {
+                $('#EmailContent').hide();
+
+            }
+        });
+
+        var x = $('#EncriptadoEmail').is(':checked');
+        if (x == true) {
+            $('#EncriptadoContent').show();
+
+        }
+        else {
+            $('#EncriptadoContent').hide();
+
+        }
+
+        $("#EncriptadoEmail").click(function (event) {
+            var x = $(this).is(':checked');
+            if (x == true) {
+                $('#EncriptadoContent').show();
+
+            }
+            else {
+                $('#EncriptadoContent').hide();
+
+            }
+        });
+
+        var x = $('#CertificadoEmail').is(':checked');
+        if (x == true) {
+            $('#CertificadoContent').show();
+
+        }
+        else {
+            $('#CertificadoContent').hide();
+
+        }
+
+        $("#CertificadoEmail").click(function (event) {
+            var x = $(this).is(':checked');
+            if (x == true) {
+                $('#CertificadoContent').show();
+
+            }
+            else {
+                $('#CertificadoContent').hide();
+
+            }
+        });
+
+
+        ////////////////////////////////////////////////////////////////////////////////
+        var x = $('#Sms').is(':checked');
+        if (x == true) {
+            $('#SmsContent').show();
+
+        }
+        else {
+            $('#SmsContent').hide();
+
+        }
+        $("#Sms").click(function (event) {
+            var x = $(this).is(':checked');
+            if (x == true) {
+                $('#SmsContent').show();
+
+            }
+            else {
+                $('#SmsContent').hide();
+
+            }
+        });
+
+        ////////////////////////////////////////////////////////////////////////////////
+        var x = $('#Fisico').is(':checked');
+        if (x == true) {
+            $('#FisicoContent').show();
+
+        }
+        else {
+            $('#FisicoContent').hide();
+
+        }
+
+        $("#Fisico").click(function (event) {
+            var x = $(this).is(':checked');
+            if (x == true) {
+                $('#FisicoContent').show();
+
+            }
+            else {
+                $('#FisicoContent').hide();
+
+            }
+        });
+
+        ////////////////////////////////////////////////////////////////////////////////
+        var x = $('#Pdf').is(':checked');
+        if (x == true) {
+            $('#PdfContent').show();
+
+        }
+        else {
+            $('#PdfContent').hide();
+
+        }
+
+        $("#Pdf").click(function (event) {
+            var x = $(this).is(':checked');
+            if (x == true) {
+                $('#PdfContent').show();
+
+            }
+            else {
+                $('#PdfContent').hide();
+
+            }
+        });
+
+        ////////////////////////////////////////////////////////////////////////////////
+            var x = $('#Publicacion').is(':checked');
+            if (x == true) {
+                $('#PublicacionContent').show();
+
+            }
+            else {
+                $('#PublicacionContent').hide();
+
+            }
+
+        $("#Publicacion").click(function (event) {
+            var x = $(this).is(':checked');
+            if (x == true) {
+                $('#PublicacionContent').show();
+
+            }
+            else {
+                $('#PublicacionContent').hide();
+
+            }
+        });
+
+        ////////////////////////////////////////////////////////////////////////////////
+
+    })
+</script>

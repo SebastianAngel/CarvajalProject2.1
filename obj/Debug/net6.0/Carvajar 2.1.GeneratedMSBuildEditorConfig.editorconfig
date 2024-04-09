@@ -1,0 +1,147 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Carvajar_2._1
+build_property.RootNamespace = Carvajar_2._1
+build_property.ProjectDir = C:\Users\sebas\Documents\Carvajar-2.2-master\Carvajar 2.1\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = C:\Users\sebas\Documents\Carvajar-2.2-master\Carvajar 2.1
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Caracteristica/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyYWN0ZXJpc3RpY2FcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Caracteristica/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyYWN0ZXJpc3RpY2FcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Caracteristica/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyYWN0ZXJpc3RpY2FcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Complejidad/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGxlamlkYWRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Complejidad/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGxlamlkYWRcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Complejidad/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGxlamlkYWRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Estado/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Estado/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Estado/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Home/CreateSolicitud.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGVTb2xpY2l0dWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Home/UserIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VySW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Ingenieros/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5nZW5pZXJvc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Ingenieros/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5nZW5pZXJvc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Ingenieros/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5nZW5pZXJvc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Ingenieros/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5nZW5pZXJvc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Ingenieros/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5nZW5pZXJvc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Periodicidad/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyaW9kaWNpZGFkXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Periodicidad/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyaW9kaWNpZGFkXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Periodicidad/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyaW9kaWNpZGFkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Solicitantes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29saWNpdGFudGVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Solicitantes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29saWNpdGFudGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Solicitantes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29saWNpdGFudGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Solicitudes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29saWNpdHVkZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Solicitudes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29saWNpdHVkZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Solicitudes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29saWNpdHVkZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-lwz31481yv
+
+[C:/Users/sebas/Documents/Carvajar-2.2-master/Carvajar 2.1/Views/Shared/_Users-Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2Vycy1MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-znr2bs59xs

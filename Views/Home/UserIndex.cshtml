@@ -1,0 +1,244 @@
+﻿@model Carvajar_2._1.Models.Data.Solicitante
+
+@{
+    ViewData["Title"] = "UserIndex";
+    Layout = "~/Views/Shared/_Users-Layout.cshtml";
+}
+
+<head>
+
+
+<style>
+    body {
+        font-family: "Lato", sans-serif
+    }
+
+
+    .carousel-item{
+        height: 42rem;
+    }
+    
+</style>
+</head>
+
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+        </div>
+        <div class="carousel-inner">
+			<div class="carousel-item">
+                <img class="bd-placeholder-img" width="100%" height="100%" src="https://www.carvajal.com/wp-content/uploads/2021/10/Miniatura.jpeg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></img>
+
+               
+            </div>
+            <div class="carousel-item active">
+				
+				<img class="bd-placeholder-img" width="100%" height="100%" src="https://s.yimg.com/ny/api/res/1.2/k6x2b1j5xcaJu.k0oL8s0A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTU2MDtjZj13ZWJw/https://media.zenfs.com/es/valora_628/0b7f5be3ea57649975de68d151ff359b" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></img>
+				
+            </div>
+            <div class="carousel-item">
+				<img class="bd-placeholder-img" width="100%" height="100%" src="https://www.carvajal.com/wp-content/uploads/2022/04/Carvajal-Propiedades-e-Inversio%CC%81n-Candelaria-Yumbo.jpeg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></img>
+
+                
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+
+
+
+  <!-- The Band Section -->
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+        <h2 class="w3-wide">SOLICITUDES DE INGENIERIA</h2>
+        <br />
+        <p class="w3-justify">En esta pagina, como cliente de carvajal, podras hacer tus solicitudes las cuales seran procesadas por nuestros ingenieros en Carvajal, las cuales seran resueltas segun suprioridad y tiempo de llegada</p>
+
+    </div>
+
+
+
+
+
+
+  <!-- The Tour Section -->
+  <div style="background-color: rebeccapurple" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+		<div class="row d-flex justify-content-center align-items-center ">
+			<div class="col-lg-8 col-xl-8 mt-3 mb-3">
+				<div class="card rounded-3">
+					<div class="row d-flex justify-content-center align-items-center mb-4 mt-4 ">
+					<img src="https://www.carvajal.com/wp-content/uploads/2021/01/Logo-Carvajal-1.svg" class="justify-content-center" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem; width:60%" alt="Sample photo">
+					</div>
+                        
+					<div class="card-body">
+
+						<h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Ingrese sus datos.</h3>
+
+
+						<form asp-action="UserIndex" method="post">
+							<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+							<div class="form-group">
+								<label asp-for="Nombre" class="control-label">Nombre Completo</label>
+								<input asp-for="Nombre" class="form-control" />
+								<span asp-validation-for="Nombre" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="Identificacion" class="control-label"></label>
+								<input asp-for="Identificacion" class="form-control" />
+								<span asp-validation-for="Identificacion" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="Correo" class="control-label"></label>
+								<input asp-for="Correo" class="form-control" />
+								<span asp-validation-for="Correo" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="Telefono" class="control-label"></label>
+								<input asp-for="Telefono" class="form-control" />
+								<span asp-validation-for="Telefono" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="Empresa" class="control-label"></label>
+								<input asp-for="Empresa" class="form-control" />
+								<span asp-validation-for="Empresa" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="Cargo" class="control-label"></label>
+								<input asp-for="Cargo" class="form-control" />
+								<span asp-validation-for="Cargo" class="text-danger"></span>
+							</div>
+							<div class="form-group mt-4 text-center">
+								<input type="submit" value="Create" class="btn btn-primary" />
+							</div>
+						</form>
+
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+ </div>
+
+
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACTO</h2>
+	<p class="w3-opacity w3-center"><i>Para recibir más información acerca de nuestros productos y/o servicios ingrese a:</i></p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa-brands fa-facebook" style="width:50px"></i> <a href="https://www.facebook.com/Carvajalhacelascosasbien" target="_blank" >Organización Carvajal</a><br>
+		<i class="fa-brands fa-instagram" style="width:50px"></i> <a href="https://www.instagram.com/organizacioncarvajal/" target="_blank">organizacioncarvajal</a><br>
+		<i class="fa-brands fa-youtube" style="width:50px"></i> <a href="https://www.youtube.com/channel/UCNNcLvfpMKQVXAoCGvhjidA" target="_blank">organizacioncarvajal3736</a><br>
+		<i class="fa-brands fa-linkedin" style="width:50px"></i> <a href="https://www.linkedin.com/company/organizacion-carvajal/" target="_blank">Organización Carvajal</a><br>
+      </div>
+      <div class="w3-col m6">
+          
+		<ul class="elementor-icon-list-items">
+			<li class="elementor-icon-list-item">
+				<a href="https://carvajalempaques.com/" target="_blank">
+
+					<span class="elementor-icon-list-text">Carvajal Empaques</span>
+				</a>
+			</li>
+			<li class="elementor-icon-list-item">
+				<a href="https://www.propal.com.co/contactenos/" target="_blank">
+
+					<span class="elementor-icon-list-text">Carvajal Pulpa y Papel</span>
+				</a>
+			</li>
+			<li class="elementor-icon-list-item">
+				<a href="http://www.carvajaleducacion.com/servicio-al-cliente" target="_blank">
+
+					<span class="elementor-icon-list-text">Carvajal Educación </span>
+				</a>
+			</li>
+			<li class="elementor-icon-list-item">
+				<a href="https://www.carvajaltys.com/servicio-al-cliente/" target="_blank">
+
+					<span class="elementor-icon-list-text">Carvajal Tecnología y Servicios</span>
+				</a>
+			</li>
+			<li class="elementor-icon-list-item">
+				<a href="https://www.mepal.com.co/contactanos/" target="_blank">
+
+					<span class="elementor-icon-list-text">Carvajal Espacios</span>
+				</a>
+			</li>
+			<li class="elementor-icon-list-item">
+				<a href="https://www.fundacioncarvajal.org.co/" target="_blank">
+
+					<span class="elementor-icon-list-text">Fundación Carvajal</span>
+				</a>
+			</li>
+			<li class="elementor-icon-list-item">
+				<a href="https://fundacionpropal.org/contacto/" target="_blank">
+
+					<span class="elementor-icon-list-text">Fundación Propal</span>
+				</a>
+			</li>
+		</ul>
+													
+
+      </div>
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+
+    <p class="w3-medium">Carvajal © 2023</p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+

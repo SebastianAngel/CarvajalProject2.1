@@ -1,0 +1,436 @@
+﻿@model Carvajar_2._1.Models.Data.Solicitud
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Solicitud</h4>
+    <hr />
+    <div class="container">
+    <dl class="justify-content-center">
+
+        <h3> Datos solicitante</h3>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Solicitante)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Solicitante)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Correo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Correo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cliente)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cliente)
+        </dd>
+        <br>
+            <h3> Datos Solicitud</h3>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Producto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Producto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+            <dt class="col-sm-2">
+                Caracteristica
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdCaracteristicaNavigation.Descripcion)
+            </dd>
+            <dt class="col-sm-2">
+                Complejidad
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdComplejidadNavigation.Descripcion)
+            </dd>
+            <dt class="col-sm-2">
+                Estado
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdEstadoNavigation.Descripcion)
+            </dd>
+            <dt class="col-sm-2">
+                Ingeniero
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdIngenieroNavigation.Nombre)
+            </dd>
+            <dt class="col-sm-2">
+                Periodicidad
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdPeriodicidadNavigation.Descripcion)
+            </dd>
+            <dt class="col-sm-2">
+                Tipo
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdTipoNavigation.Descripcion)
+            </dd>
+            @if(Model.Email == true)
+            {
+                <br>
+                <h4> Contenido Email</h4>
+             <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>  
+                
+            <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AsuntoEmail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AsuntoEmail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DominioCorpEmail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DominioCorpEmail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CuerpoEmail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CuerpoEmail)
+        </dd>
+
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.EncriptadoEmail)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.EncriptadoEmail)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ClaveEmail)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ClaveEmail)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CertificadoEmail)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CertificadoEmail)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.DominioEmail)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.DominioEmail)
+            </dd>
+
+        }
+
+
+      
+
+        @if(Model.Pdf==true){
+                <br>
+                <h4> Contenido Email</h4>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Pdf)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Pdf)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.NombrePdf)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.NombrePdf)
+            </dd>
+
+        }
+        
+
+        @if (Model.Sms == true)
+        {
+             <br>
+                <h4> Contenido Sms</h4>
+             <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sms)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sms)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Mensaje)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Mensaje)
+        </dd>
+        }
+
+
+
+
+
+       
+        @if (Model.Fisico == true)
+        {
+                <br>
+                <h4> Contenido Fisico</h4>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Fisico)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fisico)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Color)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Color)
+        </dd>
+        <dt class = "col-sm-2">
+            Aislamiento
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AislamientoFisico)
+        </dd>
+        <dt class = "col-sm-2">
+            Tamaño
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TamanoFisico)
+        </dd>
+        <dt class = "col-sm-2">
+           Tipo de papel
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TipoPapelFisico)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TipoFisico)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TipoFisico)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Microperforado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Microperforado)
+        </dd>
+       
+        <dt class = "col-sm-2">
+            Entrega
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TipoEntrega)
+        </dd>
+
+        }
+        
+
+
+        @if (Model.Publicacion==true)
+        {
+                <br>
+                <h4> Contenido Publicacion</h4>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Publicacion)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Publicacion)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ContenidoPublicacion)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ContenidoPublicacion)
+            </dd>
+        }
+
+         <br>
+                <h3> Fechas</h3>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaSolicitud)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaSolicitud)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaInicio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaInicio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaPruebas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaPruebas)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaAprobacion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaAprobacion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaFinal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaFinal)
+        </dd>
+            <br>
+            <h3> Requerimientos</h3>
+        <dt class = "col-sm-2">
+            Requerimientos Funcionales
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ReqFunc)
+        </dd>
+        <dt class = "col-sm-2">
+            Requerimientos No Funcionales
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ReqNoFunc)
+        </dd>
+        <dt class = "col-sm-2">
+            Requerimientos Ambiente
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ReqAmbiente)
+        </dd>
+  
+    </dl>
+    </div>
+</div>
+<div>
+    <a asp-action="Edit" class="btn btn-primary" asp-route-id="@Model?.IdSolicitud">Editar</a> |
+    <a asp-action="Index" class="btn btn-secondary">Regresar</a>
+</div>
+<br />
+<br />
+
+<script>
+    $(function () {
+        $('#checkEmail').click(function (event) {
+            var x = $(this).is(':checked');
+            if (x == true) {
+                $('#EmailContent').show();
+
+            }
+            else {
+                $('#EmailContent').hide();
+
+            }
+        });
+
+        $(".checkEncriptado").click(function (event) {
+            var x = $(this).is(':checked');
+            if (x == true) {
+                $('#EncriptadoContent').show();
+
+            }
+            else {
+                $('#EncriptadoContent').hide();
+
+            }
+        });
+
+        $(".checkCertificado").click(function (event) {
+            var x = $(this).is(':checked');
+            if (x == true) {
+                $('#CertificadoContent').show();
+
+            }
+            else {
+                $('#CertificadoContent').hide();
+
+            }
+        });
+
+
+        ////////////////////////////////////////////////////////////////////////////////
+
+        $(".checkSms").click(function (event) {
+            var x = $(this).is(':checked');
+            if (x == true) {
+                $('#SmsContent').show();
+
+            }
+            else {
+                $('#SmsContent').hide();
+
+            }
+        });
+
+        ////////////////////////////////////////////////////////////////////////////////
+
+        $(".checkFisico").click(function (event) {
+            var x = $(this).is(':checked');
+            if (x == true) {
+                $('#FisicoContent').show();
+
+            }
+            else {
+                $('#FisicoContent').hide();
+
+            }
+        });
+
+        ////////////////////////////////////////////////////////////////////////////////
+
+        $(".checkPdf").click(function (event) {
+            var x = $(this).is(':checked');
+            if (x == true) {
+                $('#PdfContent').show();
+
+            }
+            else {
+                $('#PdfContent').hide();
+
+            }
+        });
+
+        ////////////////////////////////////////////////////////////////////////////////
+
+        $(".checkPublicacion").click(function (event) {
+            var x = $(this).is(':checked');
+            if (x == true) {
+                $('#PublicacionContent').show();
+
+            }
+            else {
+                $('#PublicacionContent').hide();
+
+            }
+        });
+
+        ////////////////////////////////////////////////////////////////////////////////
+
+    })
+</script>
